@@ -1,5 +1,5 @@
 ----------------------------------
-README SENG480B Assignment 1
+README Unix-Compressor
 
 Coded by: Austin Lee - V00878834
 Starter code provided by: B. Bird
@@ -7,7 +7,33 @@ Starter code provided by: B. Bird
 Date: 05/19/2020
 ----------------------------------
 
-References:
+-----------------------------------------------------------------------------------
+-                                     NOTES                                       -
+-----------------------------------------------------------------------------------
+    This implementation of an LZW and old Unix Compressor is made to work with the 
+    Unix decompressor. 
+
+    This was done as part of an assignment for SENG 480B at the University of
+    Victoria under the tutelage of Professor B. Bird.
+
+-----------------------------------------------------------------------------------
+-                                 IMPLEMENTATION                                  -
+-----------------------------------------------------------------------------------
+    This implementation uses an alphabet of more than 255 characters, as such each
+    character is encoded in 9 bits. As such, this implementation makes its own
+    compressed stream of 9 bits, by filling a buffer until it is divisible by 8,
+    separating that buffer into 8 bit chunks, converting the 8 bits into a
+    character, and putting that character out into the output stream.
+
+    NOTE: This is NOT the best way to do segment a stream of bits when encoding 
+    characters into more than 8 bits, but it was what I was able to come up with 
+    as an introduction to C++ and never having coded compression or dealt with
+    bits.
+
+-----------------------------------------------------------------------------------
+-                                   REFERENCES                                    -
+-----------------------------------------------------------------------------------
+
     1. Pseudocode provided by B. Bird.
     2. Cooper Mountford - Student in the class. Discorded a lot to (verbally only)
         discuss aspects of the assignment such as type casting int to char to string and for
