@@ -1,7 +1,7 @@
 ----------------------------------
 README Unix-Compressor
 
-Coded by: Austin Lee - V00878834
+Coded by: Austin Lee
 Starter code provided by: B. Bird
 
 Date: 05/19/2020
